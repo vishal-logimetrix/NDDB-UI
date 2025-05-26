@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import bgImage from "../assets/images/social-bg.jpg";
+// import bgImage from "../assets/images/1.jpg";
 
 const icons = [
   { class: "ri-youtube-fill", url: "https://youtube.com", color: "#FF0000" },
@@ -44,10 +45,16 @@ const SocialMedia = () => {
       style={{
         backgroundImage: `linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.15)), url(${bgImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
         minHeight: "90vh",
+        width: "100%",
+        height: "auto",
         position: "relative",
         overflow: "hidden",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
       }}
     >
       {/* Outer Light Green Circle */}
@@ -106,11 +113,10 @@ const SocialMedia = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
-          position: "absolute",
-          bottom: "30px",
-          right: "30px",
+          position: "relative",
           width: "70px",
           height: "70px",
+          margin: "30px",
           borderRadius: "50%",
         }}
       >
@@ -130,12 +136,6 @@ const SocialMedia = () => {
               alignItems: "center",
               justifyContent: "center",
               fontSize: "35px",
-              border: "none",
-              margin: 0,
-              padding: 0,
-              outline: "none",
-              backgroundColor: "transparent",
-              boxShadow: "none",
               transition: "all 0.4s ease",
               textDecoration: "none",
               zIndex: 5,
@@ -164,19 +164,18 @@ const SocialMedia = () => {
             fontSize: "11px",
             flexDirection: "column",
             cursor: "pointer",
-            position: "relative",
             zIndex: 10,
             transition: "all 0.4s ease",
             transform: isOpen ? "scale(1.05)" : "scale(1)",
           }}
         >
           <div
-            className="text-center"
             style={{
               fontSize: "10px",
               lineHeight: "1.1",
               fontWeight: "bold",
               letterSpacing: "0.5px",
+              textAlign: "center",
             }}
           >
             FOLLOW
@@ -190,6 +189,3 @@ const SocialMedia = () => {
 };
 
 export default SocialMedia;
-
-
-

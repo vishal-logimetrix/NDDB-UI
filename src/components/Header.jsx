@@ -70,7 +70,7 @@ const Header = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              <img src={logo} alt="NDDB Logo" className="logo" style={{ height: '40px' }} />
+              <img src={logo} alt="NDDB Logo" className="logo" style={{ height: '60px' }} />
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
