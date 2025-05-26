@@ -1,0 +1,335 @@
+
+.headerContainer {
+    background-color: #004E1C;
+  }
+  
+  .logoContainer {
+    height: 70px;
+    width: 140px;
+  }
+  .logo {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px !important;
+    /* object-fit: contain; */
+  }
+  
+  /* Inner white navbar section */
+  .navbarLinks {
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60px;
+    /* overflow: auto !important;  used for insted of navlinks goes outside the container */
+  }
+  @media (max-width: 1320px) {
+    .navbarLinks {
+      overflow: auto;
+    }
+  }
+  
+  /* Nav links styling */
+  .navItems .nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    color: #000 !important;
+    margin: 0 8px;
+    /* padding: 10px 12px; */
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  
+  .navItems .nav-link:hover {
+    color: #004E1C !important;
+  }
+  
+  /* Active tab style */
+  .navItems .nav-link.active {
+    background-color: #D1E7DD;
+    color: #004E1C !important;
+    font-weight: 700;
+    border-radius: 8px;
+    line-height: 1;
+  }
+
+  /* Notification and user icons */
+  .icon-box-bell {
+    background-color: #EDDD5E;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-box-user {
+    background-color: #5B8D52;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-box i {
+    font-size: 22px;
+    color: #000;
+  }
+  
+  /* Mobile responsive fixes */
+  @media (max-width: 991px) {
+    .navbarLinks {
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navItems {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navItems .nav-link {
+      margin: 4px 0;
+      padding: 10px;
+    }
+  
+    .navIcons {
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+  }
+  
+/* Home carosule component section */
+  .carousel-container {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    position: relative;
+    height: 650px;
+  }
+  
+  .carousel-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .carousel-overlay p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .since-section {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .cow-icon-wrapper {
+    z-index: 2;
+  }
+  
+  .cow-icon-wrapper img {
+    width: 100px;
+    height: 60px;
+  }
+  
+  .since-box {
+    background-color: #ffe43b;
+    padding: 10px 20px;
+    color: #0f5132;
+    font-weight: bold;
+    z-index: 1;
+    /* margin-bottom: 30px; */
+    margin-bottom: -20px;
+    width: 300px;
+  }
+  
+  .custom-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .indicator-dot.active,
+  .indicator-dot:hover {
+    background-color: #000;
+  }
+
+  .dairy-services-section {
+    background-color: #fff;
+    position: relative;
+    z-index: 0; 
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .icon-img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .bg-structure {
+    position: absolute;
+    bottom: 0;
+    left: -100px !important;
+    width: 50%;
+    height: 50%;
+    transform: scaleX(-1);
+    z-index: -1; 
+    opacity: 1;
+    object-fit: contain;
+    pointer-events: none; 
+  }
+  
+  
+  /* Image stack container */
+  .image-stack {
+    max-width: 100%;
+    position: relative;
+    height: auto;
+    min-height: 360px;
+    padding: 10px;
+    text-align: end !important;
+  }
+  
+  /* Background image */
+  .back-image {
+    width: 80%;
+    height: 450px;
+    border-radius: 16px;
+    z-index: 1;
+    position: relative;
+    object-fit: cover;
+  }
+  
+  
+  /* Overlapping front image */
+  .front-image {
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    bottom: -15px;
+    left: 75px;
+    z-index: 2;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    object-fit: cover;
+  }
+  
+  /* Vertical green bar (left side) */
+  .vertical-bar {
+    position: absolute;
+    top: 15px;
+    left: 90px;
+    width: 15px;
+    height: 150px;
+    background: #004E1C;
+    z-index: 3;
+  }
+  
+  /* Horizontal green bar (under front image) */
+  .horizontal-bar {
+    position: absolute;
+    bottom: -12px;
+    right: 10px;
+    width: 150px;
+    height: 12px;
+    background-color: #004E1C;
+    z-index: 1;
+  }
+  
+  /* NEW: Bottom-right green bar (visible in design) */
+  .bottom-bar {
+    position: absolute;
+    bottom: -12px;
+    right: 10px;
+    width: 80px;
+    height: 6px;
+    background-color: #004225;
+    border-radius: 4px;
+    z-index: 1;
+  }
+  
+  @media (max-width: 767.98px) {
+    .image-stack {
+      padding: 0;
+      min-height: auto;
+    }
+  
+    .back-image {
+      width: 100%;
+      border-radius: 12px;
+    }
+  
+    .front-image {
+      position: relative;
+      width: 90%;
+      margin: -40px auto 10px auto;
+      display: block;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  
+    .horizontal-bar,
+    .vertical-bar,
+    .bottom-bar {
+      display: none !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .row .col-12 {
+      margin-top: 60px; 
+    }
+  
+    .translate-middle {
+      transform: translate(-50%, 0%) !important; 
+    }
+  }
+  
+  @media (max-width: 556px) {
+    .majorHighlitIcon {
+      margin-top: -55px !important;
+    }
+  }
