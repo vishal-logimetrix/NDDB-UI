@@ -6,14 +6,11 @@ const Footer = () => {
   return (
     <footer
       className="text-white position-relative"
-      style={{ backgroundColor: "#004E1C" }}
+      style={{ backgroundColor: "#004E1C", overflow: "hidden" }}
     >
       {/* Top Content */}
-      <div
-        className="container py-5 position-relative mb-5"
-        style={{ zIndex: 2 }}
-      >
-        <div className="row g-4">
+      <div className="container py-5 position-relative mb-5" style={{ zIndex: 2 }}>
+        <div className="row g-4 mb-5">
           {/* CTA */}
           <div className="col-12 col-md-3">
             <div className="input-group overflow-hidden">
@@ -27,15 +24,18 @@ const Footer = () => {
                 className="btn btn-light border-0"
                 type="button"
                 style={{
-                  backgroundColor: "#5B8D52", 
+                  backgroundColor: "#5B8D52",
                   height: "50px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderRadius: 0
+                  borderRadius: 0,
                 }}
               >
-                <i className="ri-arrow-right-line fs-5" style={{color: '#fff'}}></i>
+                <i
+                  className="ri-arrow-right-line fs-5"
+                  style={{ color: "#fff" }}
+                ></i>
               </button>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           {/* Producer Companies */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-md-2 mt-3">
             <h6 className="fw-bold mb-3">Producer Companies</h6>
             <ul className="list-unstyled small">
               <li>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
 
           {/* Productivity Services */}
-          <div className="col-6 col-md-2">
+          <div className="col-6 col-md-2 mt-3">
             <h6 className="fw-bold mb-3">Productivity Services</h6>
             <ul className="list-unstyled small">
               <li>
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div className="col-6 col-md-3">
+          <div className="col-6 col-md-3 mt-3">
             <h6 className="fw-bold mb-3">Contact Us</h6>
             <ul className="list-unstyled small">
               <li className="d-flex align-items-start mb-2">
@@ -113,56 +113,58 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
         </div>
       </div>
 
       {/* Footer Bottom Bar */}
       <div
-        className="container pt-3 pb-2 text-center text-md-start small d-md-flex justify-content-between align-items-center"
+        className="container text-white small pt-4 pb-3"
         style={{
-          zIndex: 2,
+          zIndex: 3,
           position: "relative",
-          color: "#004E1C",
-          borderTop: "1px solid #004E1C",
         }}
       >
-        <p className="mb-2 mb-md-0">
-          © 2025 – NDDB Dairy Services. All rights reserved.
-        </p>
-        <div>
-          <Link
-            to="#"
-            style={{ color: "#004E1C" }}
-            className="me-3 text-decoration-none"
-          >
-            Privacy Policy
-          </Link>
-          <Link
-            to="#"
-            style={{ color: "#004E1C" }}
-            className="me-3 text-decoration-none"
-          >
-            Return Policy
-          </Link>
-          <Link
-            to="#"
-            style={{ color: "#004E1C" }}
-            className="text-decoration-none"
-          >
-            Terms and Condition
-          </Link>
+        <div className="row align-items-center">
+          <div className="col-md-6 text-center text-md-start mb-md-0" style={{
+            color: '#004E1C'
+          }}>
+            © 2025 – NDDB Dairy Services. All rights reserved.
+          </div>
+          <div className="col-md-6 text-center text-md-end">
+            <Link to="#" className=" me-3 text-decoration-none" style={{
+            color: '#004E1C'
+          }}>
+              Privacy Policy
+            </Link>
+            <Link to="#" className=" me-3 text-decoration-none" style={{
+            color: '#004E1C'
+          }}>
+              Return Policy
+            </Link>
+            <Link to="#" className=" text-decoration-none" style={{
+            color: '#004E1C'
+          }}>
+              Terms and Condition
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Background Image */}
       <div
         className="position-absolute bottom-0 start-0 w-100"
-        style={{ height: "160px", zIndex: 1 }}
+        style={{ height: "280px", zIndex: 1 }}
       >
         <img
           src={bgFooter}
           alt="Footer background"
-          className="w-100 h-100 object-fit-cover"
+          className="w-100 h-100 object-fit-cover mt-5"
+          style={{
+            objectFit: "cover",
+            minHeight: "280px",
+            maxHeight: "320px",
+          }}
         />
       </div>
     </footer>

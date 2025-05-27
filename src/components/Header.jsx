@@ -31,7 +31,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} style={{ background: '#fff'}} />
 
         {/* Desktop navbar */}
-        <Navbar.Collapse id="navbarScroll" className="navbarLinks d-none d-lg-flex">
+        <Navbar.Collapse id="navbarScroll" className="navbarLinks d-none d-lg-flex rounded">
           <Nav className="mx-auto navItems" navbarScroll>
             <Nav.Link as={Link} to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Nav.Link>
             <Nav.Link as={Link} to="/about-us" className={location.pathname === '/about-us' ? 'active' : ''}>About Us</Nav.Link>
@@ -53,7 +53,10 @@ const Header = () => {
             <div className="icon-box icon-box-bell">
               <i className="ri-notification-2-fill"></i>
             </div>
-            <div className="icon-box icon-box-user">
+            <div className="icon-box icon-box-user" style={{
+              borderTopRightRadius: '6px',
+              borderBottomRightRadius: '6px' 
+            }}>
               <i className="ri-user-fill text-white"></i>
             </div>
           </div>
@@ -95,7 +98,9 @@ const Header = () => {
               <div className="icon-box icon-box-bell">
                 <i className="ri-notification-2-fill"></i>
               </div>
-              <div className="icon-box icon-box-user">
+              <div className="icon-box icon-box-user" style={{
+                borderRadius: 'none'
+              }}>
                 <i className="ri-user-fill text-white"></i>
               </div>
             </div>

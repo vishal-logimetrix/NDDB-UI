@@ -37,7 +37,7 @@ const SuccessStories = () => {
 
   return (
     <section
-      className="container-fluid px-3 py-5 position-relative mt-5 mb-5"
+      className="container-fluid px-3 position-relative mt-5"
       style={{ overflowX: "hidden" }}
     >
       {/* Cow Image - Background Layer */}
@@ -53,7 +53,7 @@ const SuccessStories = () => {
           opacity: 0.1,
           zIndex: 0,
           pointerEvents: "none",
-          marginRight: "-400px",
+          marginRight: "-280px",
         }}
       />
 
@@ -64,7 +64,7 @@ const SuccessStories = () => {
             <div
               className="position-relative w-100"
               style={{
-                borderRadius: "16px",
+                borderRadius: "14px",
                 overflow: "hidden",
                 height: "450px",
               }}

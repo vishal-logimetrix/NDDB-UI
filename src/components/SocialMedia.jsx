@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import bgImage from "../assets/images/social-bg.jpg";
-// import bgImage from "../assets/images/1.jpg";
 
 const icons = [
   { class: "ri-youtube-fill", url: "https://youtube.com", color: "#FF0000" },
@@ -14,7 +13,8 @@ const SocialMedia = () => {
   const [isOpen, setIsOpen] = useState(false);
   const timerRef = useRef(null);
 
-  const radius = 190;
+  // Wider radius for further icon spread
+  const radius = 270;
   const startAngle = 180;
   const stepAngle = 25;
 
@@ -63,8 +63,8 @@ const SocialMedia = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: isOpen ? "300px" : "0px",
-          height: isOpen ? "300px" : "0px",
+          width: isOpen ? "380px" : "0px",
+          height: isOpen ? "380px" : "0px",
           backgroundColor: "rgba(0, 78, 28, 0.5)",
           transition: "all 0.4s ease",
           borderRadius: "80% 0 0 0",
@@ -79,8 +79,8 @@ const SocialMedia = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: isOpen ? "240px" : "0px",
-          height: isOpen ? "240px" : "0px",
+          width: isOpen ? "320px" : "0px",
+          height: isOpen ? "320px" : "0px",
           backgroundColor: "rgba(0, 78, 28, 0.54)",
           transition: "all 0.4s ease",
           borderRadius: "80% 0 0 0",
@@ -95,8 +95,8 @@ const SocialMedia = () => {
           position: "absolute",
           bottom: 0,
           right: 0,
-          width: isOpen ? "300px" : "0px",
-          height: isOpen ? "300px" : "0px",
+          width: isOpen ? "400px" : "0px",
+          height: isOpen ? "400px" : "0px",
           background: isOpen
             ? "radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 70%)"
             : "transparent",
@@ -120,14 +120,13 @@ const SocialMedia = () => {
           borderRadius: "50%",
         }}
       >
-        {/* Icons */}
+        {/* Social Icons */}
         {icons.map((icon, index) => (
           <a
             key={index}
             href={icon.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon"
             style={{
               background: "transparent",
               color: "white",
@@ -146,11 +145,11 @@ const SocialMedia = () => {
           </a>
         ))}
 
-        {/* Main Button */}
+        {/* Main Button with Pulse */}
         <div
           className="share-toggle"
           style={{
-            backgroundColor: "#004E1C",
+            backgroundColor: "rgba(0, 78, 28, 0.54)",
             borderRadius: "50%",
             width: "70px",
             height: "70px",
@@ -167,6 +166,7 @@ const SocialMedia = () => {
             zIndex: 10,
             transition: "all 0.4s ease",
             transform: isOpen ? "scale(1.05)" : "scale(1)",
+            animation: isOpen ? "none" : "pulse 2s infinite ease-in-out",
           }}
         >
           <div
@@ -184,6 +184,24 @@ const SocialMedia = () => {
           </div>
         </div>
       </div>
+
+      {/* Inject Pulse Animation */}
+      <style>{`
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 78, 28, 0.4);
+          }
+          70% {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 10px rgba(0, 78, 28, 0);
+          }
+          100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 78, 28, 0);
+          }
+        }
+      `}</style>
     </div>
   );
 };

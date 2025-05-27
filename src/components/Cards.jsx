@@ -26,7 +26,7 @@ const cardsData = [
 
 const Cards = () => {
   return (
-    <div className="container py-5 mb-5 mt-5">
+    <div className="container py-5 mb-5">
       <div className="row g-5">
         {cardsData.map((card, index) => (
           <div className="col-12 col-md-6 col-lg-4" key={index}>
@@ -38,7 +38,7 @@ const Cards = () => {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   height: '280px',
-                  // borderRadius: '16px'
+                  borderRadius: '14px'
                 }}
               ></div>
 
@@ -47,7 +47,7 @@ const Cards = () => {
                 style={{
                   bottom: '-40px',
                   zIndex: 2,
-                  // borderRadius: '16px'
+                  borderRadius: '14px'
                 }}
               >
                 <h6 className="mb-2" style={{

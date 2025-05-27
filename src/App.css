@@ -230,7 +230,7 @@
   .bg-structure {
     position: absolute;
     bottom: 0;
-    left: -100px !important;
+    left: -120px !important;
     width: 50%;
     height: 50%;
     transform: scaleX(-1);
@@ -255,7 +255,7 @@
   .back-image {
     width: 80%;
     height: 450px;
-    border-radius: 16px;
+    border-radius: 14px;
     z-index: 1;
     position: relative;
     object-fit: cover;
@@ -270,7 +270,7 @@
     bottom: -15px;
     left: 75px;
     z-index: 2;
-    border-radius: 16px;
+    border-radius: 14px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border: 4px solid white;
     object-fit: cover;
@@ -383,3 +383,4 @@ body.offcanvas-open {
     background-position: center center !important;
   }
 } */
+

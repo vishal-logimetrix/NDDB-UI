@@ -10,20 +10,22 @@ import NewInitiative from '../pages/NewInitiative'
 import Publications from '../pages/Publications'
 import Career from '../pages/Career'
 import Tenders from '../pages/Tenders'
+import PageNotFound from '../components/PageNotFound'
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
+        {/* <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/milk-producer" element={<MilkProducer />} />
         <Route path="/seamen-station" element={<SeamenStation />} />
         <Route path="/new-initiative" element={<NewInitiative />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/tenders" element={<Tenders />} />
+        <Route path="/tenders" element={<Tenders />} /> */}
+        <Route path="*" element={<PageNotFound />} />
         {/* Add other routes here */}
       </Route>
     </Routes>

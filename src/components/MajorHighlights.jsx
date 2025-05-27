@@ -58,7 +58,7 @@ const MajorHighlights = () => {
               // }}
               >
                 <div className="bg-white px-4 py-2 position-relative h-100" style={{ 
-                    borderRadius: '40px',
+                    borderRadius: '38px',
                     boxShadow: '12px 12px 20px 0px #0000001A',
                     // border: '1px solid red',
                     // height: '500px'
@@ -79,17 +79,17 @@ const MajorHighlights = () => {
                   {/* Stat Number */}
                   <div className="text-center mb-3 position-absolute top-0 start-50 translate-middle bg-white d-flex align-items-center justify-content-center" style={{ 
                     // marginTop: '40px', 
-                    minHeight: '40px',
+                    minHeight: '60px',
                     width: '150px',
-                    borderRadius: '10px',
+                    borderRadius: '13px',
                     background: '#fff',
                     boxShadow: '0 -4px 10px -2px rgba(0, 0, 0, 0.1)',
                     
                   }}>
-                    <h3 className="mb-0" style={{ 
+                    <h3 className="mb-0 mt-4" style={{ 
                       fontSize: '24px',
                       lineHeight: '1.2',
-                      fontWeight: 800
+                      fontWeight: 800,
                     }}>
                       {item.stat}
                     </h3>
